@@ -1,0 +1,6 @@
+FROM alpine
+
+WORKDIR /opt/app/src
+
+ADD models ./
+

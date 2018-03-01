@@ -1,0 +1,10 @@
+FROM centos
+
+WORKDIR /opt/app/src
+
+ENTRYPOINT [ "/bin/sh", "srcbox/bin/extract_source.sh" ]
+
+RUN yum -y install git make
+
+ADD . ./
+

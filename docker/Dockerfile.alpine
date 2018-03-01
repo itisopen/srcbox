@@ -1,0 +1,11 @@
+FROM alpine
+
+WORKDIR /opt/app/src
+
+ENTRYPOINT [ "/bin/sh", "srcbox/bin/extract_source.sh" ]
+
+RUN apk update && \
+    apk add git make
+
+ADD . ./
+
